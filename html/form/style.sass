@@ -1,0 +1,93 @@
+@use "./components/table"
+
+@use "./components/field"
+@use "./components/fields/checkbox"
+@use "./components/fields/color"
+@use "./components/fields/date"
+@use "./components/fields/email"
+@use "./components/fields/file"
+@use "./components/fields/number"
+@use "./components/fields/password"
+@use "./components/fields/radio"
+@use "./components/fields/range"
+@use "./components/fields/select"
+@use "./components/fields/tel"
+@use "./components/fields/text"
+@use "./components/fields/time"
+
+*, ::after, *::before
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    font-family: monospace
+    font-size: 16px
+    line-height: 120%
+
+.form
+    width: 675px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 25px
+    padding: 25px
+
+    &.form_test
+        grid-template-columns: 1fr
+
+    &__submit
+        grid-column: 1 / -1
+        display: inline-flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 40px
+        background-color: rgb(18, 133, 104)
+        color: white
+        cursor: pointer
+        border: none
+        border-radius: 10px
+        margin: 15px auto auto auto
+        font-size: 1.15rem
+
+        &:hover, &:focus
+            background-color: darkblue
+
+        &:focus
+            outline: 2px solid darkblue
+            outline-offset: 2px
+
+.fieldset
+    border: none
+    display: flex
+    flex-direction: column
+    padding: 35px 25px 25px 25px
+    gap: 25px
+    position: relative
+
+    &_photo
+        grid-row: 1 / 3
+
+    &_radio
+        gap: 15px
+
+    &__title
+        position: relative
+        left: -20px
+        top: 10px
+        font-size: 1.25rem
+        font-weight: 700
+        text-align: start
+
+    &__error
+        font-size: 0.8rem
+        max-width: 250px
+        display: none
+        color: darkred
+        padding: 5px
+
+    &:has(input[aria-invalid="true"]) .fieldset__error
+        display: inline-block
+
+.field-wrapper_checkbox
+    grid-column: 1 / -1

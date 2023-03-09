@@ -1,0 +1,49 @@
+.field-wrapper_text
+    .field-wrapper__field-name
+        position: absolute
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        height: 20px
+        top: 8px
+        left: 10px
+        font-size: 1rem
+        background-color: white
+        transition: 0.1s ease-out
+        padding-inline: 5px
+
+    .field-wrapper__field
+        min-width: 250px
+        min-height: 40px
+        border: 1px solid #adb5bd
+        background-color: white
+        border-radius: 5px
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        padding-inline: 10px
+        font-size: 1rem
+
+        &:is(textarea)
+            min-height: 105px
+            padding-block: 10px
+
+        &[aria-invalid="true"]
+            border: 2px solid darkred
+
+        &::placeholder
+            color: transparent
+            user-select: none
+
+        &:focus
+            outline: none
+            border: 2px solid darkblue
+
+    &:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name
+        top: -10px
+        font-size: 0.85rem
+        padding-inline: 5px
+
+    &:has(.field-wrapper__field[aria-invalid="true"]:not(:focus)) .field-wrapper__field-name
+        color: darkred
+
+    &:focus-within .field-wrapper__field-name
+        color: darkblue

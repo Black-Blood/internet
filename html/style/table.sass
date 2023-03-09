@@ -1,0 +1,51 @@
+.table
+    border-collapse: separate
+
+    > *
+        font-family: 'Courier New', Courier, monospace
+
+    caption
+        font-size: 2rem
+        font-weight: 700
+        padding: 15px
+
+    th
+        font-size: 1.125rem
+        font-weight: 700
+        background-color: lightgray
+
+    th,
+    td
+        border: 1px solid lightgrey
+        text-align: center
+        vertical-align: middle
+        padding: 0
+        min-width: 125px
+
+    > thead > tr > td
+        border: none
+
+    > tbody > tr > th:is([rowspan], [colspan])
+        background-color: white
+
+    > thead > tr
+        position: sticky
+        top: 0
+        padding: 10px 15px
+        z-index: 1
+
+    > tbody > tr > th:not([rowspan], [colspan])
+        position: sticky
+        left: 0
+        padding: 10px 15px
+
+    > tfoot > tr > td
+        font-size: 1.125rem
+        border: none
+        padding: 15px
+
+    img
+        width: 125px
+        height: 125px
+        object-fit: cover
+        vertical-align: middle

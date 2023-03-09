@@ -1,0 +1,53 @@
+.table {
+  border-collapse: separate;
+}
+.table > * {
+  font-family: "Courier New", Courier, monospace;
+}
+.table caption {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 15px;
+}
+.table th {
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: lightgray;
+}
+.table th,
+.table td {
+  border: 1px solid lightgrey;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  min-width: 125px;
+}
+.table > thead > tr > td {
+  border: none;
+}
+.table > tbody > tr > th:is([rowspan], [colspan]) {
+  background-color: white;
+}
+.table > thead > tr {
+  position: sticky;
+  top: 0;
+  padding: 10px 15px;
+  z-index: 1;
+}
+.table > tbody > tr > th:not([rowspan], [colspan]) {
+  position: sticky;
+  left: 0;
+  padding: 10px 15px;
+}
+.table > tfoot > tr > td {
+  font-size: 1.125rem;
+  border: none;
+  padding: 15px;
+}
+.table img {
+  width: 125px;
+  height: 125px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}/*# sourceMappingURL=table.css.map */
