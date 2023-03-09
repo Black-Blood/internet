@@ -1,0 +1,64 @@
+// TODO
+.field-wrapper_radio
+    gap: 10px
+
+    .field-wrapper__field
+        position: absolute
+        top: 0
+        left: 0
+        width: 0
+        height: 0
+        outline: 0
+        opacity: 0
+        overflow: hidden
+        pointer-events: none
+
+    .field-wrapper__field + .field-wrapper__field-name
+        display: inline-flex
+        align-items: center
+        gap: 10px
+        position: relative
+        padding-inline-start: 30px
+        min-height: 20px
+        cursor: pointer
+
+        &::before
+            content: ""
+            display: inline-block
+            width: 20px
+            height: 20px
+            border: 1px solid rgb(138, 138, 138)
+            border-radius: 50%
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+            position: absolute
+            top: 0
+            left: 0
+
+        &::after
+            content: ""
+            display: none
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            position: absolute
+            top: 5px
+            left: 5px
+            background-color: rgb(138, 138, 138)
+
+    .field-wrapper__field[aria-invalid="true"] + .field-wrapper__field-name
+        &::before
+            border: 2px solid darkred
+
+        &::after
+            background-color: darkred
+
+    .field-wrapper__field:focus + .field-wrapper__field-name,
+    .field-wrapper__field + .field-wrapper__field-name:hover
+        &::before
+            border: 2px solid darkblue
+
+        &::after
+            background-color: darkblue
+
+    .field-wrapper__field:checked + .field-wrapper__field-name::after
+        display: inline-block

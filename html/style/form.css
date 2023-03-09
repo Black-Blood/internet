@@ -1,0 +1,405 @@
+.field-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 250px;
+}
+.field-wrapper__field-name {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.field-wrapper__error {
+  font-size: 0.8rem;
+  display: none;
+  color: darkred;
+  padding: 5px;
+}
+.field-wrapper:has(.field-wrapper__field[aria-invalid=true][aria-errormessage$=_custom]) .field-wrapper__error_custom, .field-wrapper:has(.field-wrapper__field[aria-invalid=true][aria-errormessage$=_pattern]) .field-wrapper__error_pattern, .field-wrapper:has(.field-wrapper__field[aria-invalid=true][aria-errormessage$=_length]) .field-wrapper__error_length, .field-wrapper:has(.field-wrapper__field[aria-invalid=true][aria-errormessage$=_range]) .field-wrapper__error_range, .field-wrapper:has(.field-wrapper__field[aria-invalid=true][aria-errormessage$=_empty]) .field-wrapper__error_empty {
+  display: inline-flex;
+}
+.field-wrapper:has(.field-wrapper__field:disabled) * {
+  cursor: not-allowed !important;
+}
+
+.field-wrapper_text .field-wrapper__field-name, .field-wrapper_time .field-wrapper__field-name, .field-wrapper_tel .field-wrapper__field-name, .field-wrapper_select .field-wrapper__field-name, .field-wrapper_password .field-wrapper__field-name, .field-wrapper_number .field-wrapper__field-name, .field-wrapper_email .field-wrapper__field-name, .field-wrapper_date .field-wrapper__field-name, .field-wrapper_color .field-wrapper__field-name {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  top: 8px;
+  left: 10px;
+  font-size: 1rem;
+  background-color: white;
+  transition: 0.1s ease-out;
+  padding-inline: 5px;
+}
+.field-wrapper_text .field-wrapper__field, .field-wrapper_time .field-wrapper__field, .field-wrapper_tel .field-wrapper__field, .field-wrapper_select .field-wrapper__field, .field-wrapper_password .field-wrapper__field, .field-wrapper_number .field-wrapper__field, .field-wrapper_email .field-wrapper__field, .field-wrapper_date .field-wrapper__field, .field-wrapper_color .field-wrapper__field {
+  min-width: 250px;
+  min-height: 40px;
+  border: 1px solid #adb5bd;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding-inline: 10px;
+  font-size: 1rem;
+}
+.field-wrapper_text .field-wrapper__field:is(textarea), .field-wrapper_time .field-wrapper__field:is(textarea), .field-wrapper_tel .field-wrapper__field:is(textarea), .field-wrapper_select .field-wrapper__field:is(textarea), .field-wrapper_password .field-wrapper__field:is(textarea), .field-wrapper_number .field-wrapper__field:is(textarea), .field-wrapper_email .field-wrapper__field:is(textarea), .field-wrapper_date .field-wrapper__field:is(textarea), .field-wrapper_color .field-wrapper__field:is(textarea) {
+  min-height: 105px;
+  padding-block: 10px;
+}
+.field-wrapper_text .field-wrapper__field[aria-invalid=true], .field-wrapper_time .field-wrapper__field[aria-invalid=true], .field-wrapper_tel .field-wrapper__field[aria-invalid=true], .field-wrapper_select .field-wrapper__field[aria-invalid=true], .field-wrapper_password .field-wrapper__field[aria-invalid=true], .field-wrapper_number .field-wrapper__field[aria-invalid=true], .field-wrapper_email .field-wrapper__field[aria-invalid=true], .field-wrapper_date .field-wrapper__field[aria-invalid=true], .field-wrapper_color .field-wrapper__field[aria-invalid=true] {
+  border: 2px solid darkred;
+}
+.field-wrapper_text .field-wrapper__field::-moz-placeholder, .field-wrapper_time .field-wrapper__field::-moz-placeholder, .field-wrapper_tel .field-wrapper__field::-moz-placeholder, .field-wrapper_select .field-wrapper__field::-moz-placeholder, .field-wrapper_password .field-wrapper__field::-moz-placeholder, .field-wrapper_number .field-wrapper__field::-moz-placeholder, .field-wrapper_email .field-wrapper__field::-moz-placeholder, .field-wrapper_date .field-wrapper__field::-moz-placeholder, .field-wrapper_color .field-wrapper__field::-moz-placeholder {
+  color: transparent;
+  -moz-user-select: none;
+       user-select: none;
+}
+.field-wrapper_text .field-wrapper__field::placeholder, .field-wrapper_time .field-wrapper__field::placeholder, .field-wrapper_tel .field-wrapper__field::placeholder, .field-wrapper_select .field-wrapper__field::placeholder, .field-wrapper_password .field-wrapper__field::placeholder, .field-wrapper_number .field-wrapper__field::placeholder, .field-wrapper_email .field-wrapper__field::placeholder, .field-wrapper_date .field-wrapper__field::placeholder, .field-wrapper_color .field-wrapper__field::placeholder {
+  color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.field-wrapper_text .field-wrapper__field:focus, .field-wrapper_time .field-wrapper__field:focus, .field-wrapper_tel .field-wrapper__field:focus, .field-wrapper_select .field-wrapper__field:focus, .field-wrapper_password .field-wrapper__field:focus, .field-wrapper_number .field-wrapper__field:focus, .field-wrapper_email .field-wrapper__field:focus, .field-wrapper_date .field-wrapper__field:focus, .field-wrapper_color .field-wrapper__field:focus {
+  outline: none;
+  border: 2px solid darkblue;
+}
+.field-wrapper_text:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_time:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_tel:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_select:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_password:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_number:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_email:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_date:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name, .field-wrapper_color:has(.field-wrapper__field:where(:focus, :not(:-moz-placeholder-shown))) .field-wrapper__field-name {
+  top: -10px;
+  font-size: 0.85rem;
+  padding-inline: 5px;
+}
+.field-wrapper_text:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_time:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_tel:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_select:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_password:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_number:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_email:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_date:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name, .field-wrapper_color:has(.field-wrapper__field:where(:focus, :not(:placeholder-shown))) .field-wrapper__field-name {
+  top: -10px;
+  font-size: 0.85rem;
+  padding-inline: 5px;
+}
+.field-wrapper_text:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_time:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_tel:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_select:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_password:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_number:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_email:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_date:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name, .field-wrapper_color:has(.field-wrapper__field[aria-invalid=true]:not(:focus)) .field-wrapper__field-name {
+  color: darkred;
+}
+.field-wrapper_text:focus-within .field-wrapper__field-name, .field-wrapper_time:focus-within .field-wrapper__field-name, .field-wrapper_tel:focus-within .field-wrapper__field-name, .field-wrapper_select:focus-within .field-wrapper__field-name, .field-wrapper_password:focus-within .field-wrapper__field-name, .field-wrapper_number:focus-within .field-wrapper__field-name, .field-wrapper_email:focus-within .field-wrapper__field-name, .field-wrapper_date:focus-within .field-wrapper__field-name, .field-wrapper_color:focus-within .field-wrapper__field-name {
+  color: darkblue;
+}
+
+.field-wrapper_checkbox {
+  width: 100%;
+}
+.field-wrapper_checkbox .field-wrapper__field {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.field-wrapper_checkbox .field-wrapper__field-name {
+  display: inline-flex;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  width: 100%;
+}
+.field-wrapper_checkbox .field-wrapper__field-name::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  cursor: pointer;
+}
+.field-wrapper_checkbox:has(.field-wrapper__field:not(:disabled)) .field-wrapper__field-name::before {
+  border: 1px solid #adb5bd;
+}
+.field-wrapper_checkbox:has(.field-wrapper__field:focus:not(:checked)) .field-wrapper__field-name::before {
+  border: 2px solid darkblue;
+}
+.field-wrapper_checkbox:has(.field-wrapper__field:checked) .field-wrapper__field-name::before {
+  border-color: rgb(138, 138, 138);
+  background-color: rgb(138, 138, 138);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.field-wrapper_checkbox:has(.field-wrapper__field:checked:focus) .field-wrapper__field-name::before, .field-wrapper_checkbox:has(.field-wrapper__field:checked) .field-wrapper__field-name:hover::before {
+  border-color: darkblue;
+  background-color: darkblue;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+.field-wrapper_checkbox:has(.field-wrapper__field:disabled) .field-wrapper__field-name::before {
+  background-color: #e9ecef;
+}
+
+.field-wrapper_color .field-wrapper__field::-webkit-color-swatch {
+  border: none;
+  display: flex;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.field-wrapper_color .field-wrapper__field::-moz-color-swatch {
+  border: none;
+}
+
+.field-wrapper_file .field-wrapper__field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.field-wrapper_file .field-wrapper__field-name {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 40px;
+  background-color: rgb(18, 133, 104);
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 15px auto auto auto;
+}
+.field-wrapper_file .field-wrapper__field-name:hover {
+  background-color: darkblue;
+}
+.field-wrapper_file:has(.field-wrapper__field:focus) .field-wrapper__field-name {
+  outline: 2px solid darkblue;
+  outline-offset: 2px;
+  background-color: darkblue;
+}
+.field-wrapper_file .field-wrapper__photo {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 2px dashed rgb(138, 138, 138);
+  padding: 15px;
+}
+
+.field-wrapper_radio {
+  gap: 10px;
+}
+.field-wrapper_radio .field-wrapper__field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  outline: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.field-wrapper_radio .field-wrapper__field + .field-wrapper__field-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
+  min-height: 20px;
+  cursor: pointer;
+}
+.field-wrapper_radio .field-wrapper__field + .field-wrapper__field-name::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 50%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.field-wrapper_radio .field-wrapper__field + .field-wrapper__field-name::after {
+  content: "";
+  display: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: rgb(138, 138, 138);
+}
+.field-wrapper_radio .field-wrapper__field[aria-invalid=true] + .field-wrapper__field-name::before {
+  border: 2px solid darkred;
+}
+.field-wrapper_radio .field-wrapper__field[aria-invalid=true] + .field-wrapper__field-name::after {
+  background-color: darkred;
+}
+.field-wrapper_radio .field-wrapper__field:focus + .field-wrapper__field-name::before,
+.field-wrapper_radio .field-wrapper__field + .field-wrapper__field-name:hover::before {
+  border: 2px solid darkblue;
+}
+.field-wrapper_radio .field-wrapper__field:focus + .field-wrapper__field-name::after,
+.field-wrapper_radio .field-wrapper__field + .field-wrapper__field-name:hover::after {
+  background-color: darkblue;
+}
+.field-wrapper_radio .field-wrapper__field:checked + .field-wrapper__field-name::after {
+  display: inline-block;
+}
+
+.field-wrapper_range .field-wrapper__field {
+  width: 250px;
+  height: 30px;
+  border: 1px solid #adb5bd;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.field-wrapper_range .field-wrapper__field:focus-within {
+  border: 2px solid darkblue;
+}
+.field-wrapper_range .field-wrapper__field-name {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  left: 10px;
+  background-color: white;
+  transition: 0.1s ease-out;
+  padding-inline: 5px;
+  top: -10px;
+  font-size: 0.85rem;
+}
+.field-wrapper_range .field-wrapper__field-input {
+  width: 220px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+}
+.field-wrapper_range .field-wrapper__field-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.field-wrapper_range .field-wrapper__field-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: 1px solid #adb5bd;
+}
+.field-wrapper_range .field-wrapper__field-input:focus {
+  outline: none;
+}
+.field-wrapper_range .field-wrapper__field-input:focus::-webkit-slider-thumb {
+  margin-top: -7px;
+  border: 2px solid darkblue;
+  background-color: darkblue;
+}
+.field-wrapper_range .field-wrapper__field-input:focus::-webkit-slider-runnable-track {
+  border: 2px solid darkblue;
+}
+.field-wrapper_range .field-wrapper__range-list {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+}
+
+*, ::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.form {
+  width: 675px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  padding: 25px;
+}
+.form.form_test {
+  grid-template-columns: 1fr;
+}
+.form__submit {
+  grid-column: 1/-1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(18, 133, 104);
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin: 15px auto auto auto;
+  font-size: 1.15rem;
+}
+.form__submit:hover, .form__submit:focus {
+  background-color: darkblue;
+}
+.form__submit:focus {
+  outline: 2px solid darkblue;
+  outline-offset: 2px;
+}
+
+.fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 25px 25px 25px;
+  gap: 25px;
+  position: relative;
+}
+.fieldset_photo {
+  grid-row: 1/3;
+}
+.fieldset_radio {
+  gap: 15px;
+}
+.fieldset__title {
+  position: relative;
+  left: -20px;
+  top: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: start;
+}
+.fieldset__error {
+  font-size: 0.8rem;
+  max-width: 250px;
+  display: none;
+  color: darkred;
+  padding: 5px;
+}
+.fieldset:has(input[aria-invalid=true]) .fieldset__error {
+  display: inline-block;
+}
+
+.field-wrapper_checkbox {
+  grid-column: 1/-1;
+}/*# sourceMappingURL=form.css.map */

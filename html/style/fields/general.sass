@@ -1,0 +1,26 @@
+.field-wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    width: 250px
+
+    &__field-name
+        user-select: none
+
+    &__error
+        font-size: 0.8rem
+        display: none
+        color: darkred
+        padding: 5px
+
+    &:has(.field-wrapper__field[aria-invalid="true"][aria-errormessage$="_custom"]) &__error_custom,
+    &:has(.field-wrapper__field[aria-invalid="true"][aria-errormessage$="_pattern"]) &__error_pattern,
+    &:has(.field-wrapper__field[aria-invalid="true"][aria-errormessage$="_length"]) &__error_length,
+    &:has(.field-wrapper__field[aria-invalid="true"][aria-errormessage$="_range"]) &__error_range,
+    &:has(.field-wrapper__field[aria-invalid="true"][aria-errormessage$="_empty"]) &__error_empty
+        display: inline-flex
+
+    &:has(.field-wrapper__field:disabled) *
+        cursor: not-allowed !important

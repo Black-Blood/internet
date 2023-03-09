@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ua">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" href="assets/accessibility.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Програмування для Інтернет" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Програмування для Інтернет</title>
+    </head>
+    <body class="page">
+        <header class="page__header">
+            <a href="./index.html">
+                <h1 class="logo">
+                    <img
+                        class="logo__icon"
+                        src="assets/accessibility.svg"
+                        width="40px"
+                        height="40px"
+                        alt=""
+                        aria-hidden="true"
+                    />
+                    <span class="logo__text">Програмування для Інтернет</span>
+                </h1>
+            </a>
+        </header>
+        <nav class="page__nav" aria-label="Меню">
+            <h2 class="page__menu-title">Меню</h2>
+            <iframe src="./component/menu/menu.html" name="menu" title="Меню">
+            </iframe>
+        </nav>
+        <main class="page__main">
+            <iframe
+                name="content"
+                title="Виконання лабораторних робіт"
+                src="./component/not-selected/not-selected.html"
+            >
+            </iframe>
+        </main>
+        <footer class="page__footer">
+            <address class="author">
+                <span>Виконав</span> <span> — </span>
+                <strong>Саврак Богдан Михайлович</strong>
+            </address>
+        </footer>
+    </body>
+</html>

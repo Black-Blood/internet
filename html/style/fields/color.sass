@@ -1,0 +1,13 @@
+@use "./text"
+
+.field-wrapper_color
+    @extend .field-wrapper_text
+
+    .field-wrapper__field
+        &::-webkit-color-swatch
+            border: none
+            display: flex
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+
+        &::-moz-color-swatch
+            border: none
