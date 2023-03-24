@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="passport.xsl" type="text/xsl"?>
+<!DOCTYPE passports SYSTEM "passport.dtd">
+<passports>
+	<passport id="KA123456">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+	<passport id="KA123457">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+	<passport id="KA123458">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+	<passport id="KA123459">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+	<passport id="KA123460">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+	<passport id="KA123461">
+		<fullname
+			lastname="Саврак"
+			firstname="Богдан"
+			fathername="Михайлович"
+		/>
+		<birthday
+			year="2002"
+			month="11"
+			day="7"
+		/>
+		<address
+			city="Київ"
+			street="Івана Виговського" />
+		<photo 
+			path="../assets/avatar.png" />
+	</passport>
+</passports>

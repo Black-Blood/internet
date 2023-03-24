@@ -1,0 +1,19 @@
+<!ELEMENT solar-system (planet-groups)>
+
+<!ELEMENT planet-groups (group*)>
+
+<!ELEMENT group (planet*)>
+<!ATTLIST group name CDATA #REQUIRED>
+
+<!ELEMENT planet EMPTY>
+<!ATTLIST planet name CDATA #REQUIRED>
+<!ATTLIST planet mass CDATA #REQUIRED>
+<!ATTLIST planet diameter CDATA #REQUIRED>
+<!ATTLIST planet density CDATA #REQUIRED>
+<!ATTLIST planet gravity CDATA #REQUIRED>
+<!ATTLIST planet day_length CDATA #REQUIRED>
+<!ATTLIST planet distanse_from_sun CDATA #REQUIRED>
+<!ATTLIST planet temperature CDATA #REQUIRED>
+<!ATTLIST planet number_of_moons CDATA #REQUIRED>
+<!ATTLIST planet image CDATA #REQUIRED>
+<!ATTLIST planet note CDATA #IMPLIED>

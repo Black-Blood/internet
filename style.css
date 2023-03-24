@@ -29,7 +29,7 @@ body {
 }
 
 .page__header {
-    padding-inline: calc((100% - 1200px) / 2);
+    padding-inline: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;

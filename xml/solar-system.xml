@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE solar-system SYSTEM "solar-system.dtd">
+<!-- <?xml-model href="solar-system.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?> -->
+<?xml-stylesheet href="solar-system.xsl" type="text/xsl"?>
+<solar-system>
+    <planet-groups>
+        <group name="Земна група">
+            <planet
+				name="Меркурій"
+                mass="0.330"
+                diameter="4.879"
+                density="5427"
+                gravity="3.7"
+                day_length="4222.6"
+                distanse_from_sun="57.9"
+                temperature="167"
+                number_of_moons="0"
+                image="../assets/planets/Mercury.webp"
+                note="Найближче до Сонця"
+            />
+            <planet
+                name="Венера"
+                mass="4.87"
+                diameter="12.104"
+                density="5243"
+                gravity="8.9"
+                day_length="2802.0"
+                distanse_from_sun="108.2"
+                temperature="464"
+                number_of_moons="0"
+                image="../assets/planets/Venus.webp"
+                note=""
+            />
+            <planet
+                name="Земля"
+                mass="5.97"
+                diameter="12.756"
+                density="5514"
+                gravity="9.8"
+                day_length="24.0"
+                distanse_from_sun="149.6"
+                temperature="15"
+                number_of_moons="1"
+                image="../assets/planets/Earth.webp"
+                note="Наш світ"
+            />
+            <planet
+                name="Марс"
+                mass="0.642"
+                diameter="6.792"
+                density="3933"
+                gravity="3.7"
+                day_length="24.7"
+                distanse_from_sun="227.9"
+                temperature="-65"
+                number_of_moons="2"
+                image="../assets/planets/Mars.webp"
+                note="Червона планета"
+            />
+        </group>
+        <group name="Газові гіганти">
+            <planet
+                name="Юпітер"
+                mass="1898"
+                diameter="142.984"
+                density="1326"
+                gravity="23.1"
+                day_length="9.9"
+                distanse_from_sun="778.6"
+                temperature="-110"
+                number_of_moons="67"
+                image="../assets/planets/Jupiter.webp"
+                note="Найбільша планета"
+            />
+            <planet
+                name="Сатурн"
+                mass="568"
+                diameter="120.536"
+                density="687"
+                gravity="9.0"
+                day_length="10.7"
+                distanse_from_sun="1433.5"
+                temperature="-140"
+                number_of_moons="62"
+                image="../assets/planets/Saturn.webp"
+                note=""
+            />
+        </group>
+        <group name="Крижані гіганти">
+            <planet
+                name="Уран"
+                mass="86.8"
+                diameter="51.118"
+                density="1271"
+                gravity="8.7"
+                day_length="17.2"
+                distanse_from_sun="2872.5"
+                temperature="-195"
+                number_of_moons="27"
+                image="../assets/planets/Uranus.webp"
+                note=""
+            />
+            <planet
+                name="Нептун"
+                mass="102"
+                diameter="49.528"
+                density="1638"
+                gravity="11.0"
+                day_length="16.1"
+                distanse_from_sun="4495.1"
+                temperature="-200"
+                number_of_moons="14"
+                image="../assets/planets/Neptune.webp"
+                note=""
+            />
+        </group>
+        <group name="Карликові планети">
+            <planet
+                name="Плутон"
+                mass="0.0146"
+                diameter="2.370"
+                density="2095"
+                gravity="0.7"
+                day_length="153.3"
+                distanse_from_sun="5906.4"
+                temperature="-225"
+                number_of_moons="5"
+                image="../assets/planets/Pluton.webp"
+                note="Більше не планета з 2006 року, але це залишається суперечливим."
+            />
+        </group>
+    </planet-groups>
+</solar-system>

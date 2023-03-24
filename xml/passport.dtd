@@ -1,0 +1,21 @@
+<!ELEMENT passports (passport*)>
+
+<!ELEMENT passport (fullname,birthday,address,photo)>
+<!ATTLIST passport id ID #REQUIRED>
+
+<!ELEMENT fullname EMPTY>
+<!ATTLIST fullname lastname CDATA #REQUIRED>
+<!ATTLIST fullname firstname CDATA #REQUIRED>
+<!ATTLIST fullname fathername CDATA #REQUIRED>
+
+<!ELEMENT birthday EMPTY>
+<!ATTLIST birthday year CDATA #REQUIRED>
+<!ATTLIST birthday month CDATA #REQUIRED>
+<!ATTLIST birthday day CDATA #REQUIRED>
+
+<!ELEMENT address EMPTY>
+<!ATTLIST address city CDATA #REQUIRED>
+<!ATTLIST address street CDATA #REQUIRED>
+
+<!ELEMENT photo EMPTY>
+<!ATTLIST photo path CDATA #REQUIRED>

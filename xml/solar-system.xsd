@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="solar-system">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="planet-groups" minOccurs="1" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="group" minOccurs="1" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="planet" minOccurs="1" maxOccurs="unbounded">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="name" type="xsd:string" />
+                                                <xsd:attribute name="mass" type="xsd:double" />
+                                                <xsd:attribute name="diameter" type="xsd:double" />
+                                                <xsd:attribute name="density" type="xsd:double" />
+                                                <xsd:attribute name="gravity" type="xsd:double" />
+                                                <xsd:attribute name="day_length" type="xsd:double" />
+                                                <xsd:attribute name="distanse_from_sun" type="xsd:double" />
+                                                <xsd:attribute name="temperature" type="xsd:double" />
+                                                <xsd:attribute name="number_of_moons" type="xsd:decimal" />
+                                                <xsd:attribute name="image" type="xsd:string" />
+                                                <xsd:attribute name="note" type="xsd:string" />
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="name" type="xsd:string" />
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
