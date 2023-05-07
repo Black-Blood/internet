@@ -39,7 +39,8 @@
 }
 .field-wrapper_text .field-wrapper__field, .field-wrapper_time .field-wrapper__field, .field-wrapper_tel .field-wrapper__field, .field-wrapper_select .field-wrapper__field, .field-wrapper_password .field-wrapper__field, .field-wrapper_number .field-wrapper__field, .field-wrapper_email .field-wrapper__field, .field-wrapper_date .field-wrapper__field, .field-wrapper_color .field-wrapper__field {
   min-width: 250px;
-  min-height: 40px;
+  height: 40px;
+  line-height: 40px;
   border: 1px solid #adb5bd;
   background-color: white;
   border-radius: 5px;
@@ -344,6 +345,9 @@ body {
 .form.form_test {
   grid-template-columns: 1fr;
 }
+.form.form_field {
+  display: flex;
+}
 .form__submit {
   grid-column: 1/-1;
   display: inline-flex;
@@ -365,6 +369,12 @@ body {
 .form__submit:focus {
   outline: 2px solid darkblue;
   outline-offset: 2px;
+}
+.form.form_field .form__submit {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 15px;
+  margin: 0;
 }
 
 .fieldset {

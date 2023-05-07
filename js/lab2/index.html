@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Document</title>
+
+        <script src="script.js" type="module"></script>
+        <script src="task2.js" type="module"></script>
+
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            dialog {
+                border: none;
+                border-radius: 5px;
+                padding: 25px;
+
+                width: 400px;
+                height: 200px;
+            }
+
+            #timer {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 25px;
+                width: 100%;
+                position: relative;
+                font-size: 2em;
+                font-weight: 400;
+            }
+
+            #timer:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                border-radius: 1px;
+                background-color: lightgray;
+            }
+
+            #timer::after {
+                content: '';
+                position: absolute;
+                bottom: 1px;
+                width: 0;
+                height: 3px;
+                border-radius: 1px;
+                background-color: darkred;
+            }
+
+            .run-animation::after {
+                animation: 20s linear infinite time;
+            }
+
+            .answer {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 30px;
+                font-size: 1rem;
+                font-weight: bold;
+                border: none;
+                background-color: lightgray;
+            }
+
+            .answer:hover {
+                background-color: darkblue;
+                color: white;
+            }
+
+            fieldset {
+                border: none;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            legend {
+                font-size: 1rem;
+                font-weight: bold;
+                font-style: italic;
+                margin-bottom: 25px;
+            }
+
+            @keyframes time {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <span id="toggle">Some text to toggle</span>
+
+        <button type="button" id="btnStartTask1">Виконати завдання 1</button>
+
+        <button
+            type="button"
+            id="btnStartTest"
+            aria-expanded="true"
+            aria-controls="test"
+        >
+            Виконати тестування
+        </button>
+
+        <dialog id="test">
+            <form id="quiz" method="dialog" novalidate>
+                <span id="score"></span>
+
+                <span class="run-animation" role="timer" id="timer"></span>
+
+                <fieldset class="fieldset">
+                    <legend class="fieldset__title" id="questionText"></legend>
+
+                    <button
+                        class="answer"
+                        type="button"
+                        name="question"
+                        id="question_answerTrue"
+                        value="true"
+                    >
+                        Так
+                    </button>
+
+                    <button
+                        class="answer"
+                        type="button"
+                        name="question"
+                        id="question_answerFalse"
+                        value="false"
+                    >
+                        Ні
+                    </button>
+                </fieldset>
+            </form>
+        </dialog>
+    </body>
+</html>

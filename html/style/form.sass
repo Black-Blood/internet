@@ -33,6 +33,9 @@ body
     &.form_test
         grid-template-columns: 1fr
 
+    &.form_field
+        display: flex
+
     &__submit
         grid-column: 1 / -1
         display: inline-flex
@@ -54,6 +57,11 @@ body
         &:focus
             outline: 2px solid darkblue
             outline-offset: 2px
+
+    &.form_field &__submit
+        width: fit-content
+        padding: 5px 15px
+        margin: 0
 
 .fieldset
     border: none

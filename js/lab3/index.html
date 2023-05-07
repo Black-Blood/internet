@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../html/style/form.css" />
+
+        <script src="multiplication.js" type="module"></script>
+        <script src="calendar.js" type="module"></script>
+        <script src="clock.js" type="module"></script>
+        <script src="script.js" type="module"></script>
+
+        <style>
+            body {
+                padding: 25px;
+            }
+
+            #placeForTable {
+                margin-bottom: 25px;
+            }
+
+            #placeForCalendar,
+            #fieldDateOfFirstSundayInMonth {
+                margin: 25px;
+            }
+
+            #placeForClock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 1px solid #adb5bd;
+                position: relative;
+                font-size: 1.5rem;
+            }
+
+            #placeForClock:before {
+                content: '';
+                top: 2%;
+                left: 2%;
+                position: absolute;
+                width: 96%;
+                height: 96%;
+                border-radius: 50%;
+                border: 1px solid #adb5bd;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="placeForTable"></div>
+
+        <form class="form form_field" id="formSelectMonth">
+            <div class="field-wrapper field-wrapper_date">
+                <input
+                    class="field-wrapper__field"
+                    id="selectedMonth"
+                    type="month"
+                    required
+                />
+                <label class="field-wrapper__field-name" for="selectedMonth">
+                    Рік та місяць (yyyy-mm)
+                </label>
+            </div>
+            <button class="form__submit">Глянути календар</button>
+        </form>
+
+        <div
+            class="field-wrapper field-wrapper_number"
+            id="fieldDateOfFirstSundayInMonth"
+        >
+            <output
+                class="field-wrapper__field"
+                id="dateOfFirstSundayInMonth"
+            ></output>
+
+            <label
+                class="field-wrapper__field-name"
+                for="dateOfFirstSundayInMonth"
+            >
+                День першої неділі місяця
+            </label>
+        </div>
+
+        <div id="placeForCalendar"></div>
+
+        <div id="placeForClock"></div>
+    </body>
+</html>
